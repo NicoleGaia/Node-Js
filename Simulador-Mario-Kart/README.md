@@ -15,7 +15,7 @@
     <tr>
         <td style="border: 1px solid black; text-align: center;">
             <p>Mario</p>
-            <img src="Simulador-Mario-Kart/docs/mario.gif" alt="Mario Kart" width="60" height="60">
+            <img src="docs/mario.gif" alt="Mario Kart" width="60" height="60">
         </td>
         <td style="border: 1px solid black; text-align: justify;">
             <p>Velocidade: 4</p>
@@ -24,7 +24,7 @@
         </td>
         <td style="border: 1px solid black; text-align: center;">
             <p>Peach</p>
-            <img src="Simulador-Mario-Kart/docs/peach.gif" alt="Peach" width="60" height="60">
+            <img src="docs/peach.gif" alt="Peach" width="60" height="60">
         </td>
         <td style="border: 1px solid black; text-align: justify;">
             <p>Velocidade: 3</p>
@@ -33,7 +33,7 @@
         </td>
         <td style="border: 1px solid black; text-align: center;">
             <p>Yoshi</p>
-            <img src="Simulador-Mario-Kart/docs/yoshi.gif" alt="Yoshi" width="60" height="60">
+            <img src="docs/yoshi.gif" alt="Yoshi" width="60" height="60">
         </td>
         <td style="border: 1px solid black; text-align: justify;">
             <p>Velocidade: 2</p>
@@ -44,7 +44,7 @@
     <tr>
         <td style="border: 1px solid black; text-align: center;">
             <p>Bowser</p>
-            <img src="Simulador-Mario-Kart/docs/bowser.gif" alt="Bowser" width="60" height="60">
+            <img src="docs/bowser.gif" alt="Bowser" width="60" height="60">
         </td>
         <td style="border: 1px solid black; text-align: justify;">
             <p>Velocidade: 5</p>
@@ -53,7 +53,7 @@
         </td>
         <td style="border: 1px solid black; text-align: center;">
             <p>Luigi</p>
-            <img src="Simulador-Mario-Kart/docs/luigi.gif" alt="Luigi" width="60" height="60">
+            <img src="docs/luigi.gif" alt="Luigi" width="60" height="60">
         </td>
         <td style="border: 1px solid black; text-align: justify;">
             <p>Velocidade: 3</p>
@@ -62,7 +62,7 @@
         </td>
         <td style="border: 1px solid black; text-align: center;">
             <p>Donkey Kong</p>
-            <img src="Simulador-Mario-Kart/docs/dk.gif" alt="DK" width="60" height="60">
+            <img src="docs/dk.gif" alt="DK" width="60" height="60">
         </td>
         <td style="border: 1px solid black; text-align: justify;">
             <p>Velocidade: 2</p>
