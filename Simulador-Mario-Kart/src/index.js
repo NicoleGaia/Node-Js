@@ -55,6 +55,7 @@ async function playRaceEngine(character1, character2) {
         let block = await getRandomBlock()
         console.log(`Bloco: ${block}`)
 
+
          //rolar dados
          let diceResult1 = await rollDice()
          let diceResult2 = await rollDice()
@@ -82,7 +83,7 @@ async function playRaceEngine(character1, character2) {
          if(block === "CONFRONTO"){
              let powerResult1 = diceResult1 + character1.PODER
              let powerResult2 = diceResult2 + character2.PODER
-            
+          
              console.log(`${character1.NOME} confrontou com ${character2.NOME}! 🥊`)
 
              await logRollResult(character1.NOME, "PODER", diceResult1, character1.PODER)
@@ -92,13 +93,20 @@ async function playRaceEngine(character1, character2) {
                 if(character2.PONTOS > 0){
                     character2.PONTOS--
                     console.log(`${character2.NOME} perdeu 1 ponto!`)
+
+                    powerResult1 = Math.random()
+                    powerResult1 = character1.PONTOS++
+                    console.log(` ganhou 1 ponto`)
                 }
+                
+
              }
 
              if(powerResult2 > powerResult1){
                 if(character1.PONTOS > 0){
                     character1.PONTOS--
                     console.log(`${character1.NOME} perdeu 1 ponto!`)
+
                 }
              }
 
