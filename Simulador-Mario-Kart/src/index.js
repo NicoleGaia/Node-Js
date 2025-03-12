@@ -82,16 +82,64 @@ async function playRaceEngine(character1, character2) {
          if(block === "CONFRONTO"){
              let powerResult1 = diceResult1 + character1.PODER
              let powerResult2 = diceResult2 + character2.PODER
- 
+            
+             console.log(`${character1.NOME} confrontou com ${character2.NOME}! 🥊`)
+
+             await logRollResult(character1.NOME, "PODER", diceResult1, character1.PODER)
+             await logRollResult(character2.NOME, "PODER", diceResult2, character2.PODER)
+
+             if(powerResult1 > powerResult2){
+                if(character2.PONTOS > 0){
+                    character2.PONTOS--
+                    console.log(`${character2.NOME} perdeu 1 ponto!`)
+                }
+             }
+
+             if(powerResult2 > powerResult1){
+                if(character1.PONTOS > 0){
+                    character1.PONTOS--
+                    console.log(`${character1.NOME} perdeu 1 ponto!`)
+                }
+             }
+
+             if(powerResult1 === powerResult2){
+                console.log(`Nenhum ponto foi perdido!`)
+             }
          }
+
+         if(TotalTestSkill1 > TotalTestSkill2){
+            console.log(`${character1.NOME} marcou 1 ponto!`)
+            character1.PONTOS++
+         } else if(TotalTestSkill2 > TotalTestSkill1){
+            console.log(`${character2.NOME} marcou 1 ponto!`)
+            character2.PONTOS++
+         }
+
+         console.log('-----------------------------------')
     }
 
        
+}
+
+async function declareWinner(character1, character2) {
+    console.log(`🏁🏆 A corrida terminou! 🏆🏁 \n`)
+    console.log(`🏅 Resultado final:`)
+    console.log(`${character1.NOME}: ${character1.PONTOS} pontos`)
+    console.log(`${character2.NOME}: ${character2.PONTOS} pontos`)
+
+    if(character1.PONTOS > character2.PONTOS){
+        console.log(`\n🎉🏆 ${character1.NOME} foi o grande VENCEDOR! PARABÉNS!🎉`)
+    } else if(character2.PONTOS > character1.PONTOS){
+        console.log(`\n🎉🏆 ${character2.NOME} foi o grande VENCEDOR! PARABÉNS!🎉`)
+    } else{
+        console.log('\n🎉🏆 Foi empate! 🎉🏆')
+    }
 }
 
 (async function main(){ // função auto invocada
     console.log(`🏁🚨 Corrida entre ${Player1.NOME} e ${Player2.NOME} começando... \n`) //tecla windows + tecla ponto
 
     await playRaceEngine(Player1, Player2)
+    await declareWinner(Player1, Player2)
 })() 
 
