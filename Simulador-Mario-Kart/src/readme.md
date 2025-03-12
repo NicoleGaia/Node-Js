@@ -1,1 +1,0 @@
-<h1>Desafio de projeto Mario Kart.JS</h1>
