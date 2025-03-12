@@ -53,7 +53,7 @@
         </td>
         <td style="border: 1px solid black; text-align: center;">
             <p>Luigi</p>
-            <img src="../docs/luigi.gif" alt="Luigi" width="60" height="60">
+            <img src="Simulador-Mario-Kart/docs/luigi.gif" alt="Luigi" width="60" height="60">
         </td>
         <td style="border: 1px solid black; text-align: justify;">
             <p>Velocidade: 3</p>
