@@ -79,7 +79,7 @@ async function playRaceEngine(character1, character2) {
              await logRollResult(character1.NOME, "MANOBRABILIDADE", diceResult1, character1.MANOBRABILIDADE)
              await logRollResult(character2.NOME, "MANOBRABILIDADE", diceResult2, character2.MANOBRABILIDADE)
          }
- 
+
          if(block === "CONFRONTO"){
              let powerResult1 = diceResult1 + character1.PODER
              let powerResult2 = diceResult2 + character2.PODER
@@ -150,4 +150,5 @@ async function declareWinner(character1, character2) {
     await playRaceEngine(Player1, Player2)
     await declareWinner(Player1, Player2)
 })() 
+
 
