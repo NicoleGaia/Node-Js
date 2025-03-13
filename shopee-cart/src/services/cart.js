@@ -49,11 +49,20 @@ async function calcItem(userCart){
     const result = userCart.reduce((total, item) => total + item.subtotal(), 0)
     console.log(`R$ ${result},00`)
 }
+async function listItem(userCart){
+    console.log("\nList of books in the cart:")
+    userCart.forEach((item) => {
+        if(item.type === "livros"){
+            console.log(`Livro: ${item.name} - R$ ${item.price},00`)
+        }
+    })
+}
 
 export {
     addItem,
     deleteItem,
     removeItem,
     displayCart,
-    calcItem
+    calcItem,
+    listItem
 }
