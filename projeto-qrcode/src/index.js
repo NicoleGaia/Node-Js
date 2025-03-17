@@ -6,6 +6,9 @@ import createPassword from "./services/password/create.js"
 
 async function main() {
     prompt.get(mainPrompt, async function (err, choose){
+        if(err){
+            console.log(err)
+        }
         if(choose.select == 1){
             await createQRCode()
         }
