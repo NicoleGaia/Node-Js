@@ -6,4 +6,4 @@
     "strict": true,
     "esModuleInterop": true                              /* Skip type checking all .d.ts files. */
   }
-}
+} 
