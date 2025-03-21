@@ -18,7 +18,9 @@ Podcasts feitos em vídeo
 - Listar os episódios podcast em sessões de categorias
 
 ### Como vou implementar:
-Vou retornar em uma api rest (json) o nome podcast, nome episódio, imagem de capa, link
+GET: retorna lista de episódios
+
+response:
 
 ```js
 [
