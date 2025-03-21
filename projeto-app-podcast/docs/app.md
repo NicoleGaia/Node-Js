@@ -18,7 +18,7 @@ Podcasts feitos em vídeo
 - Listar os episódios podcast em sessões de categorias
 
 ### Como vou implementar:
-GET: retorna lista de episódios
+
 
 response:
 
@@ -43,3 +43,5 @@ response:
 ]
 
 ```
+
+GET: retorna lista de episódios baseado em um parâmetro enviado pelo cliente do nome do podcast
