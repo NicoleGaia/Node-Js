@@ -9,7 +9,7 @@ export const app = async (
     res: http.ServerResponse
 ) => {
     // querryString
-    const [baseUrl, querryString] = req.url?.split("?") ?? ["", ""]
+    const baseUrl = req.url?.split("?")[0]
     
     // LISTAR PODCASTS
     if(req.method === HttpMethod.GET && baseUrl === Routes.LIST){
