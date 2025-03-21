@@ -2,6 +2,7 @@ import * as http from "http"
 
 import {getFilterEpisodes, getListEpisodes} from './controllers/podcasts-controller'
 import { Routes } from "./routes/routes"
+import { HttpMethod } from "./utils/http-methods"
 
 const server = http.createServer(
     async (req: http.IncomingMessage, res: http.ServerResponse) => {
@@ -9,11 +10,11 @@ const server = http.createServer(
         const [baseUrl, querryString] = req.url?.split("?") ?? ["", ""]
         
         // LISTAR PODCASTS
-        if(req.method === "GET" && baseUrl === Routes.LIST){
+        if(req.method === HttpMethod.GET && baseUrl === Routes.LIST){
             await getListEpisodes(req, res)
         }
 
-        if(req.method === "GET" && baseUrl === Routes.EPISODE){
+        if(req.method === HttpMethod.GET && baseUrl === Routes.EPISODE){
             await getFilterEpisodes(req, res)
         }
     }
