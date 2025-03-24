@@ -1,9 +1,15 @@
 import fastify from "fastify";
+import cors from "@fastify/cors"
 
 const server = fastify({logger: true})
 
+server.register(cors, {
+    origin: "*", //qualquer pessoa consome minha API
+    methods: ["GET", "POST"]
+})
+
 const teams = [
-    {id: 1, name: "ferrari", base: "USA"},
+    {id: 1, name: "Ferrari", base: "USA"},
     {id: 2, name: "McLaren", base: "Woking, United Kingdom"},
     {id: 3, name: "Mercedes", base: "Brackley, United Kingdom"},
     {id: 4, name: "Red Bull Racing", base: "Milton Keynes, United Kingdom"}
@@ -28,11 +34,25 @@ server.get("/drivers", async(req, res) => {
 
 interface DriverParams{
     id: string
+    name: string
 }
 
 server.get<{Params: DriverParams}>("/drivers/:id", async(req, res) => {
     const id = parseInt(req.params.id)
     const driver = drivers.find( d => d.id === id)
+
+    if(!driver){
+        res.type("application/json").code(404)
+        return {message: "Driver Not Found"}
+    } else {
+        res.type("application/json").code(200)
+        return {driver}
+    }
+})
+
+server.get<{Params: DriverParams}>("/teams/:name", async(req, res) => {
+    const name = req.params.name
+    const driver = teams.find(n => n.name === name)
 
     if(!driver){
         res.type("application/json").code(404)
