@@ -1,4 +1,6 @@
 export interface PlayerModel {
     id: number,
-    name: string
+    name: string,
+    club: string,
+    
 }
