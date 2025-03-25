@@ -1,15 +1,13 @@
-import express, {json, Request, Response} from "express"
+import express from "express"
+import router from "./routes"
 
 function createApp(){ 
-const app = express()
+    const app = express()
 
-app.use(json())
+    app.use(express.json())
+    app.use("/api", router)
 
-app.get("/", (req: Request, res: Response) => {
-    res.status(200).json({player: "messi"})
-})
-
-return app
+    return app
 }
 
 export default createApp
