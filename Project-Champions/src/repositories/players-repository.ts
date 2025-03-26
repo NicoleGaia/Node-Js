@@ -6,13 +6,43 @@ const database: PlayerModel[] = [
         id: 1, 
         name: "Lionel Messi",
         club: "PSG",
-        nationality: "Argentina"
+        nationality: "Argentina",
+        position: "Atacante"
     },
     {
         id: 2, 
-        name: "Ronaldo",
-        club: ""
-    }
+        name: "Vinícius Jr",
+        club: "Real Madrid",
+        nationality: "Brasil",
+        position: "Atacante"
+    },
+    {
+        id: 3, 
+        name: "Raphinha",
+        club: "Barcelona",
+        nationality: "Brasil",
+        position: "Artilheiro"
+    },
+    {
+        id: 4, 
+        name: "Joshua Kimmich",
+        club: "Bayern de Munique",
+        nationality: "Alemanha",
+        position: "Meio de campo"
+    },
+    {
+        id: 5, 
+        name: "Lucas Beraldo",
+        club: "PSG",
+        nationality: "Brasil",
+        position: "Defensor"
+    },{
+        id: 6, 
+        name: "Florentino",
+        club: "Benfica",
+        nationality: "Portugal",
+        position: "Meio de campo"
+    },
 ]
 
 
